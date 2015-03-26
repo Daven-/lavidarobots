@@ -1,0 +1,150 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.step p, h1,h2, h3{
+    color: black;
+}
+.navbar {
+    margin: 0px;
+    margin-top: -15px;
+    //margin-left: 25px;
+    
+}
+.navbar-header {
+    margin-top: -15px;
+    
+}
+.navbar a{
+    color: darkorange;
+}
+.navbar-collapse ul {
+    font-size: 18px;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.nav > li:hover,
+.nav > li:focus {
+    border-bottom-width: 10px;
+  
+  border-bottom: 2px solid darkorange;
+  
+}
+.jumbotron {
+    background-color: white;
+    background-image: url("../img/penpaper2.jpg");
+    background-size: cover;
+}
+.jumbotron p {
+    font-size: 15px;
+    color: black;
+}
+.jumbotron h3{
+    color: black;
+}
+
+
+.backSection{
+    background-color: white;
+    border-radius: 2px;
+    padding-bottom: 10px;
+    
+    
+}
+.backSection h1, h2, h3, p{
+    color: black;
+}
+.backSection p{
+   padding-left: 10px;
+   
+}
+.lv-footer {
+    margin-top: 10px;
+}
+.extra-clickable { 
+    pointer-events: auto 
+}
+
+
+
+.pBody {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: -20px;
+}
+
+.hTitle {
+    color: darkorange;
+    padding-top: 100px;
+}
+.hRobots {
+    color: black;
+}
+
+.lFont li{
+    font-size: 17px;
+    //padding-left: 20px;
+    font-weight: bold;
+}
+
+.sLi {
+    padding-left: 20px;
+}
+
+.step h1 {
+    color: darkorange;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.tubemargin{
+    margin: 15px;
+}
+.divider1 {
+    border-bottom: .08em solid #eee;
+    margin: 15px;
+    padding-top: 5px;
+}
+.darko{
+    color: darkorange;
+    font-weight: bold;
+}
+
+
+.darko a{
+    color: darkorange;
+    font-weight: bold;
+}
+
+.bg-darkorange{
+    color: buttontext;
+    background-color: whitesmoke;
+}
+.nav-display{
+    display: inline-block;
+}
+
+.col-float1 {
+    float: none;
+    margin: 0 auto;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
