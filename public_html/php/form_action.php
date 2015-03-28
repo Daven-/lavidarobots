@@ -33,7 +33,7 @@ if (empty($_POST['email'])) {
     } else {
         $subject = "Name: ".$name . " Subject:" . $subject;
         mail($to, $subject, $message);
-        echo "<central><h1>Success Email Sent: Redirecting...</h1></central>";
+        echo "<center><h1>Success Email Sent: Redirecting...</h1></center>";
     }
 }
 
