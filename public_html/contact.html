@@ -20,6 +20,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="js/validateform.js"></script>
     </head>
     <body>
         <nav class="navbar" role="navigation">
@@ -46,44 +47,81 @@ and open the template in the editor.
                 </div>
             </div>
         </nav>
-
+        
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron" style="background-image: none;">
             <div class="container">
                 <center>
-                    <h2>Would you like to join the team, donate,
+                    <h2>Would you like to join the team
                         volunteer, join an upcoming newsletter or
                         just say "Hi!"? You can send us an email down below!</h2>
                 </center>
             </div>
         </div>
-
+        <!--/validate input-->
+        <script>
+            function validate(form){
+                var count = 0;
+                if(form.name.value == ""){
+                    $('#name').attr('placeholder', "Name Needed");
+                    count++;
+                }
+                if(form.subject.value == ""){
+                    $('#subject').attr('placeholder', "Subject Needed");
+                    count++;
+                }
+                if(validateEmail(form.email.value) != ""){
+                    form.email.value = "";
+                    $('#email').attr('placeholder', "Email Needed Or Not Accepted");
+                    count++;
+                }
+                
+                if(form.message.value == ""){
+                    $('#message').attr('placeholder', "Message Needed");
+                    count++;
+                }
+                
+                if(count>0){
+                    return false;
+                }else{
+                    return true;
+                }
+                /*
+                switch(form){
+                    case form.name: (form.name == "")? $('#name').attr('placeholder', "Name Needed"): '';
+                    case form.subject: (form.name == "")? $('#name').attr('placeholder', "Name Needed"): ''; 
+                    case form.email: (form.name == "")? $('#name').attr('placeholder', "Name Needed"): '';
+                    case form.message: (form.name == "")? $('#name').attr('placeholder', "Name Needed")return false: '';
+                }*/
+            }
+        </script>
         <!--/Contact Form-->
         <div class="container">
             <div class="col-md-12">
                 <div class="backSection">
                     <div class="divider1">
-                        <form method="post" action="../php/form_action.php"> 
+                        <form method="post" action="php/form_action.php" onsubmit="return validate(this)">
                             <!--/name-->
                             <div class="form-group-sm">
                                 <label>Name:</label>
-                                <input type="text" class="form-control" id="name" />
+                                <input type="text" class="form-control" id="name" name="name" />
+                               
                             </div>
                             <!--/email-->
                             <div class="form-group-sm">
                                 <label>Email:</label>
-                                <input type="email" class="form-control" id="email" />
+                                <input type="email" class="form-control" id="email" name="email" /> 
                             </div>
                             <!--/subject-->
                             <div class="form-group-sm">
                                 <label>Subject:</label>
-                                <input type="text" class="form-control" id="subject" />
+                                <input type="text" class="form-control" id="subject" name="subject" />
                             </div>
                             <br>
                             <!--/message-->
                             <div class="form-group-lg">
                                 <label>Message:</label>
-                                <textarea class="form-control" rows="5" id="message"></textarea>
+                                <textarea class="form-control" rows="5" id="message" name="message"></textarea>
                             </div>
                             <!--/send-->
                             <br>
